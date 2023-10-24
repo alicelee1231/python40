@@ -1,18 +1,20 @@
 import pyautogui
-import time
 import pyperclip
+import time
+import clipboard
 
-pyautogui.moveTo(1230,868,0.2)
-
+# Move the mouse to the desired position and click to focus the input area
+pyautogui.moveTo(450, 263, duration=0.2)
 pyautogui.click()
 time.sleep(0.5)
 
-# a =pyautogui.position()
-# print(a)
+# Copy the text to the clipboard
+clipboard.copy("서울 날씨")
 
-pyperclip.copy("weather")
-pyautogui.hotkey("ctrl","v")
+# Simulate a paste operation using Ctrl+V
+pyautogui.hotkey("ctrl", "v")
 time.sleep(0.5)
 
-pyautogui.write(["enter"])
+# Simulate pressing Enter
+pyautogui.press("enter")
 time.sleep(1)
