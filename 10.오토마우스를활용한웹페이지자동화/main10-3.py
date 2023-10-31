@@ -30,3 +30,4 @@ screenshot = pyautogui.screenshot(region=(start_x, start_y, width, height))
 # Save the screenshot to a file with a valid file path
 file_path = '10.오토마우스를활용한웹페이지자동화/서울날씨.png'
 screenshot.save(file_path)
+
