@@ -12,9 +12,11 @@ for things in genobj:
     print(things)
 
 #decorator 작성
+#*args, **kwarg는 모든 변수를 받을 수 있는것
+
 def square_it(func):
-    def new_function(a,b):
-        result = func(a,b)
+    def new_function(*args, **kwargs):
+        result = func(*args, **kwargs)
         return result + result
     return new_function
 
