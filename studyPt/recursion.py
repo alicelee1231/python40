@@ -55,24 +55,45 @@
 
 #3번 문제 decorator
 def test(fun):
-    def new_fun():
+    def new_fun(): #wrapper 함수
         print("start")
         fun()
         print("end")
-        return fun
     return new_fun
 
-@test
-def fun():
-    return
-fun()
 
+@test
+def fun1():
+    print("test")
+fun1()
+
+
+def decorator1(func):
+    def wrapper():
+        print('decorator1')
+        func()
+    return wrapper
+ 
+def decorator2(func):
+    def wrapper():
+        print('decorator2')
+        func()
+    return wrapper
+ 
+# 데코레이터를 여러 개 지정
+@decorator1
+@decorator2
+def hello():
+    print('hello')
+ 
+hello()
+
+#4번 예외처리 문제
 class OopsException(Exception):
-    print("Caught an oops")
     pass
 try : 
     raise OopsException
-except OopsException as oosp :
-    oosp
+except OopsException :
+    print("Caught an oops")
 
 
