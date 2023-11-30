@@ -52,6 +52,17 @@
 
 #2번문제 generator
 
+def get_odds():
+    for number in range(1,10,2):
+        yield number
+
+count = 1
+for number in get_odds():
+    if count == 3 :
+        print("the third odd number is ", number)
+        break
+    count +=1
+
 
 #3번 문제 decorator
 def test(fun):
